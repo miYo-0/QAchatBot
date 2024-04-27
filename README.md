@@ -1,20 +1,30 @@
-# QAchatBot
+# Chat Bot Project README
 
-
-
-# Llama2 QAchatBot
-
-The Llama2 QAchatBot is a powerful tool designed to provide information from the book (A PACT WITH THE SUN Textbook for Class VI) by answering user queries using state-of-the-art language models and vector stores. This README will guide you through the setup and usage of the Llama2 QA Bot.
+This project implements a chat bot that utilizes language models and retrieval-based question answering techniques to interactively respond to user queries. The project is structured into two main files: `main.py` and `model.py`.
 
 ## Table of Contents
 
 - [Introduction](#QAchatBot)
 - [Table of Contents](#table-of-contents)
+- [Files](#Files)
+- [Dependencies](#Dependencies)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [License](#license)
+
+## Files
+1. `main.py` This file contains code for creating the vector database from PDF documents in a specified directory.
+   * create_vector_db(): Function to create the vector database by loading PDF documents, splitting text, generating embeddings, and saving the database locally using FAISS.
+2. `model.py` This file contains code for the question-answering model and chat bot interaction logic.
+  * `set_custom_prompt()`: Function to define a custom prompt template for the QA retrieval process.
+  * `retrieval_qa_chain(llm, prompt, db)`: Function to create a retrieval-based question answering chain using the specified language model, prompt template, and vector database.
+  * `load_llm()`: Function to load the language model for question answering.
+  * `qa_bot()`: Function to initialize the question-answering bot by loading the vector database, language model, and prompt template.
+  * `final_result(query)`: Function to obtain the final response from the chat bot for a given user query.
+  * `@cl.on_chat_start` and `@cl.on_message`: Decorators to define the behavior of the chat bot when a conversation starts and when a message is received, respectively.
+
 
 ## Prerequisites
 
@@ -27,6 +37,10 @@ Before you can start using the Llama2 QAchatBot, make sure you have the followin
     - sentence-transformers
     - faiss
     - PyPDF2 (for PDF document loading)
+ 
+## Dependencies
+* `langchain_community`: A library for language processing tasks, including embeddings, vector stores, document loaders, and LLMS.
+* `chainlit`: A library for building conversational AI models with chaining logic.
 
 ## Installation
 
