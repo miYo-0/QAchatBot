@@ -90,7 +90,7 @@ This project is licensed under the MIT License.
 For more information on how to use, configure, and extend the Llama2 QAchatBot, please refer to the Langchain documentation or contact the project maintainers.
 
 ## For my personal reference
-    ```bash
+    ```
     chainlit run model.py -w
     ```
 
