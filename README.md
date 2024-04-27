@@ -16,14 +16,14 @@ This project implements a chat bot that utilizes language models and retrieval-b
 
 ## Files
 1. `main.py` This file contains code for creating the vector database from PDF documents in a specified directory.
-   * create_vector_db(): Function to create the vector database by loading PDF documents, splitting text, generating embeddings, and saving the database locally using FAISS.
+   * `create_vector_db()`: Function to create the vector database by loading PDF documents, splitting text, generating embeddings, and saving the database locally using FAISS.
 2. `model.py` This file contains code for the question-answering model and chat bot interaction logic.
-  * `set_custom_prompt()`: Function to define a custom prompt template for the QA retrieval process.
-  * `retrieval_qa_chain(llm, prompt, db)`: Function to create a retrieval-based question answering chain using the specified language model, prompt template, and vector database.
-  * `load_llm()`: Function to load the language model for question answering.
-  * `qa_bot()`: Function to initialize the question-answering bot by loading the vector database, language model, and prompt template.
-  * `final_result(query)`: Function to obtain the final response from the chat bot for a given user query.
-  * `@cl.on_chat_start` and `@cl.on_message`: Decorators to define the behavior of the chat bot when a conversation starts and when a message is received, respectively.
+   * `set_custom_prompt()`: Function to define a custom prompt template for the QA retrieval process.
+   * `retrieval_qa_chain(llm, prompt, db)`: Function to create a retrieval-based question answering chain using the specified language model, prompt template, and vector database.
+   * `load_llm()`: Function to load the language model for question answering.
+   * `qa_bot()`: Function to initialize the question-answering bot by loading the vector database, language model, and prompt template.
+   * `final_result(query)`: Function to obtain the final response from the chat bot for a given user query.
+   * `@cl.on_chat_start` and `@cl.on_message`: Decorators to define the behavior of the chat bot when a conversation starts and when a message is received, respectively.
 
 
 ## Prerequisites
