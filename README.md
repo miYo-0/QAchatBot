@@ -2,7 +2,7 @@
 
 
 
-# Llama2 QA Bot
+# Llama2 QAchatBot
 
 The Llama2 QAchatBot is a powerful tool designed to provide information from the book (A PACT WITH THE SUN Textbook for Class VI) by answering user queries using state-of-the-art language models and vector stores. This README will guide you through the setup and usage of the Llama2 QA Bot.
 
@@ -18,7 +18,7 @@ The Llama2 QAchatBot is a powerful tool designed to provide information from the
 
 ## Prerequisites
 
-Before you can start using the Llama2 QA Bot, make sure you have the following prerequisites installed on your system:
+Before you can start using the Llama2 QAchatBot, make sure you have the following prerequisites installed on your system:
 
 - Python 3.6 or higher
 - Required Python packages (you can install them using pip):
@@ -88,5 +88,12 @@ This project is licensed under the MIT License.
 ---
 
 For more information on how to use, configure, and extend the Llama2 QAchatBot, please refer to the Langchain documentation or contact the project maintainers.
+
+## For my personal reference
+    
+    ```
+    chainlit run model.py -w
+    ```
+    
 
 Happy coding with Llama2 QAchatBot! 🚀
