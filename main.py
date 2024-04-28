@@ -23,9 +23,6 @@ def create_vector_db():
     db = FAISS.from_documents(texts, embeddings)
     db.save_local(DB_FAISS_PATH)
 
-    # Load from local storage with allow_dangerous_deserialization=True
-    # db = FAISS.load_local(DB_FAISS_PATH, embeddings, allow_dangerous_deserialization=True)
- 
 
 if __name__ == "__main__":
     create_vector_db()
